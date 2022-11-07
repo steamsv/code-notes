@@ -1,0 +1,13 @@
+```
+cat > ifcfg-eth0:0 <<EOF
+DEVICE="eth0:0"
+BOOTPROTO="none"
+ONBOOT="yes"
+IPADDR=""
+NETMASK="255.255.255.0"
+GATEWAY=
+DNS1=8.8.4.4
+DNS2=8.8.8.8
+EOF
+
+```
