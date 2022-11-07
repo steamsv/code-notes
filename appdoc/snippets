@@ -1,0 +1,12 @@
+```
+sed -i "s/aes-256-gcm/aes-256-cfb/g" `grep -rl "aes-256-gcm" ./`
+cd /etc/sysconfig/network-scripts
+bash <(curl -s -L https://git.io/v2ray.sh)
+/etc/v2ray/config.json
+systemctl restart network
+systemctl restart v2ray
+systemctl stop firewalld
+systemctl disable firewalld
+systemctl stop v2ray
+systemctl disable v2ray
+```
