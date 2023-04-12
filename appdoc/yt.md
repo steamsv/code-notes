@@ -22,8 +22,17 @@ chmod +x yt-dlp
 ```
 ./yt-dlp  --list-subs https://www.youtube.com/watch?v=NpEd2S6iQZI
 ```
+下载字幕
+```
+./yt-dlp --skip-download --write-sub --sub-lang zh https://www.youtube.com/watch?v=bEZ6AdK5hes
+```
 
-下载对应分辨率加音频加字幕
+下载对应分辨率加音频
 ```
-./yt-dlp  -f315+140 --sub-lang zh https://www.youtube.com/watch?v=NpEd2S6iQZI
+./yt-dlp  -f315+140 https://www.youtube.com/watch?v=NpEd2S6iQZI
 ```
+视频字幕合并
+```
+ffmpeg -i Giddy.mkv -c:v av1_nvenc -b 20M -crf 5 -vf subtitles=Giddy.vtt 3.mp4
+```
+
