@@ -18,7 +18,12 @@ chmod +x yt-dlp
 ```
 ./yt-dlp -F https://www.youtube.com/watch?v=NpEd2S6iQZI
 ```
-下载对应分辨率
+查看字幕
 ```
-./yt-dlp -f313 https://www.youtube.com/watch?v=NpEd2S6iQZI
+./yt-dlp  --list-subs https://www.youtube.com/watch?v=NpEd2S6iQZI
+```
+
+下载对应分辨率加音频加字幕
+```
+./yt-dlp  -f315+140 --sub-lang zh https://www.youtube.com/watch?v=NpEd2S6iQZI
 ```
